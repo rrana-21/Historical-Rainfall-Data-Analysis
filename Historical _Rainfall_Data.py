@@ -26,7 +26,7 @@ g = requests.get('https://data.calgary.ca/resource/x9fe-3zah.json?$limit=1000')
 loc_arr = g.json()
 loc_df =  pd.DataFrame.from_dict(loc_arr)
 #quadrant boundaries - bring in geojson file
-f = pathlib.Path('City_Quadrants.geojson')
+f = pathlib.Path('City Quadrants.geojson')
 gdf = gdp.read_file(f)
 #convert channel feature for each dataframe is an int, and change rainfall feature datatype to float 
 df['channel'] = df['channel'].astype(int)
